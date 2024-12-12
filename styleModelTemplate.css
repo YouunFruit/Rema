@@ -1,0 +1,376 @@
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.product-catalog {
+    background: linear-gradient(180deg, #71E6A8 0%, #000 20%);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    padding: 199px 80px;
+}
+
+.gallery-container {
+    display: flex;
+    width: 100%;
+    max-width: 1221px;
+    flex-direction: column;
+    color: #000;
+    letter-spacing: 3.9px;
+    font: 400 30px REM, sans-serif;
+}
+
+.product-showcase {
+    border-radius: 14px;
+    background-image: radial-gradient(ellipse at bottom,  #71E6A8 40%,#000 );
+    min-height: 483px;
+    width: 100%;
+}
+
+.gallery-nav {
+    align-self: center;
+    display: flex;
+    margin-top: 36px;
+    align-items: center;
+    gap: 40px 48px;
+    flex-wrap: wrap;
+}
+
+.nav-button {
+    align-self: stretch;
+    border-radius: 10px;
+    background-color: #71E6A8;
+    min-height: 59px;
+    width: 191px;
+    margin: auto 0;
+    padding: 11px 0;
+    border: none;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+}
+
+.header-content {
+    align-self: start;
+    display: flex;
+    width: 873px;
+    max-width: 100%;
+    flex-direction: column;
+    font-family: Rubik, sans-serif;
+    color: #fff;
+    margin: 50px 0 0 67px;
+}
+
+.main-title {
+    font-size: 60px;
+    font-weight: 300;
+    letter-spacing: 7.8px;
+}
+
+.description-text {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 65px;
+}
+
+.cta-button {
+    border-radius: 50px;
+    background-color: #71E6A8;
+    align-self: end;
+    width: 243px;
+    color: #000;
+    margin: 91px 294px 0 0;
+    padding: 9px 69px;
+    font: 500 30px Rethink Sans, sans-serif;
+    border: none;
+    cursor: pointer;
+}
+
+.divider {
+    margin-top: 51px;
+    width: 672px;
+    max-width: 100%;
+    height: 1px;
+    border: 1px solid #fff;
+}
+
+.details-section {
+    margin-top: 155px;
+    width: 100%;
+    max-width: 1106px;
+}
+
+.details-container {
+    gap: 20px;
+    display: flex;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 29%;
+}
+
+.details-header {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    font-weight: 400;
+}
+
+.details-title {
+    align-self: stretch;
+    border-radius: 10px;
+    background-color: #71E6A8;
+    min-height: 92px;
+    color: #282B38;
+    text-align: center;
+    padding: 11px 55px;
+    font: 60px Rubik, sans-serif;
+}
+
+.details-nav {
+    display: flex;
+    margin-top: 49px;
+    width: 100%;
+    flex-direction: column;
+    color: #fff;
+    font: 25px Reddit Mono, sans-serif;
+}
+
+.detail-button {
+    align-self: stretch;
+    border-radius: 50px;
+    background-color: transparent;
+    min-height: 61px;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #898787;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 34px;
+}
+
+.detail-button:first-child {
+    margin-top: 0;
+}
+
+.content-area {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 71%;
+    margin-left: 20px;
+}
+
+.content-container {
+    border-radius: 10px;
+    background-color: #000;
+    display: flex;
+    min-height: 434px;
+    width: 100%;
+    align-items: end;
+    gap: 82px 40px;
+    color: #fff;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 71px 48px;
+    border: 2px solid #535252;
+}
+
+.content-text {
+    flex-grow: 1;
+    width: 611px;
+    font: 20px Rubik, sans-serif;
+}
+
+.spec-box {
+    border-radius: 6px;
+    background-color: #000;
+    display: flex;
+    min-width: 240px;
+    min-height: 138px;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    width: 282px;
+    padding: 5px 17px;
+    font: 25px Reddit Mono, sans-serif;
+    border: 1px solid #898787;
+}
+
+.spec-content {
+    align-self: stretch;
+    margin: auto 0;
+    border: 5px solid #898787;
+}
+
+.additional-text {
+    width: 190px;
+    border-radius: 6px;
+    background-color: #000;
+    min-height: 138px;
+    flex-grow: 1;
+    padding: 24px 17px;
+    font: 500 30px Rethink Sans, sans-serif;
+    border: 1px solid #898787;
+    color: #fff;
+}
+
+.combo-section {
+    align-self: stretch;
+    display: flex;
+    margin-top: 86px;
+    flex-direction: column;
+    color: #fff;
+    text-align: center;
+    font: 400 50px Reddit Mono, sans-serif;
+}
+
+.combo-image {
+    aspect-ratio: 1.62;
+    object-fit: contain;
+    object-position: center;
+    width: 1089px;
+    align-self: center;
+    margin-top: 86px;
+    max-width: 100%;
+}
+
+.questions-title {
+    color: #fff;
+    margin-top: 225px;
+    font: 500 40px Rethink Sans, sans-serif;
+}
+
+.inquire-button {
+    border-radius: 50px;
+    background-color: #71E6A8;
+    margin-top: 44px;
+    width: 339px;
+    max-width: 100%;
+    color: #000;
+    padding: 23px 70px;
+    font: 500 40px Rethink Sans, sans-serif;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 991px) {
+    .product-catalog {
+        padding: 100px 20px;
+    }
+
+    .gallery-container {
+        max-width: 100%;
+    }
+
+    .product-showcase {
+        max-width: 100%;
+    }
+
+    .gallery-nav {
+        max-width: 100%;
+    }
+
+    .nav-button {
+        white-space: initial;
+    }
+
+    .header-content {
+        margin-top: 40px;
+    }
+
+    .main-title {
+        max-width: 100%;
+        font-size: 40px;
+    }
+
+    .description-text {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+
+    .cta-button {
+        margin: 40px 10px 0 0;
+        padding: 0 20px;
+    }
+
+    .divider {
+        margin-top: 40px;
+    }
+
+    .details-section {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+
+    .details-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .details-header {
+        margin-top: 40px;
+    }
+
+    .details-title {
+        font-size: 40px;
+        margin-right: 5px;
+        padding: 0 20px;
+    }
+
+    .details-nav {
+        margin-top: 40px;
+    }
+
+    .detail-button {
+        padding: 0 20px;
+    }
+
+    .content-area {
+        width: 100%;
+    }
+
+    .content-container {
+        max-width: 100%;
+        margin-top: 40px;
+        padding: 0 20px;
+    }
+
+    .content-text {
+        max-width: 100%;
+    }
+
+    .combo-section {
+        max-width: 100%;
+        margin-top: 40px;
+        font-size: 40px;
+    }
+
+    .combo-image {
+        margin-top: 40px;
+    }
+
+    .questions-title {
+        margin-top: 40px;
+    }
+
+    .inquire-button {
+        margin-top: 40px;
+        padding: 0 20px;
+    }
+}
