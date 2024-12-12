@@ -1,0 +1,155 @@
+#container3D{
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+}
+
+#textCanvas{
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#logoContainer{
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+
+    
+}
+
+
+.jetbrains-mono {
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+#logoContainer img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    transform: translate(-50%,50%);
+}
+
+#aboutRema p{
+    text-align:justify;
+    
+}
+
+.section {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movableDiv p{
+    color: white;
+}
+
+.movableDiv{
+    position: absolute;
+    width: 500px; 
+    height:fit-content; 
+    background-color: blue;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;    /* Center content vertically */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 95%, rgba(127,237,145,1) 98%);
+}
+
+header {
+    background: #7fed91;
+    padding: 15px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7fed91;
+    padding: 10px 20px;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.navbar a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    flex: 1;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background-color: #2f2f2f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-grid div {
+    text-align: left;
+}
+
+.footer-grid ul {
+    list-style: none;
+}
+
+.footer-grid a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-grid a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 14px;
+}
