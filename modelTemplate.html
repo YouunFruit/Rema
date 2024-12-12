@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./styleModelTemplate.css">
+</head>
+<body>
+<div class="product-catalog">
+    <div class="gallery-container">
+        <div class="product-showcase"></div>
+        <nav class="gallery-nav" role="navigation" aria-label="Product gallery navigation">
+            <button class="nav-button" tabindex="0">BODY</button>
+            <button class="nav-button" tabindex="0">HEAD</button>
+            <button class="nav-button" tabindex="0">INPUT</button>
+            <button class="nav-button" tabindex="0">DETAILS</button>
+        </nav>
+    </div>
+
+    <div class="header-content">
+        <h1 class="main-title">
+            <span class="font-normal">Built For</span>
+            <span class="font-medium">Speed.</span>
+        </h1>
+        <p class="description-text">
+            descriptive text... descriptive text descriptive text... descriptive
+            text... descriptive text descriptive text... descriptive text...
+            descriptive text descriptive text... descriptive text... descriptive text
+            descriptive text
+        </p>
+    </div>
+
+    <button class="cta-button" tabindex="0">Inquire.</button>
+
+    <div class="divider"></div>
+
+    <section class="details-section">
+        <div class="details-container">
+            <div class="sidebar">
+                <div class="details-header">
+                    <h2 class="details-title">Details</h2>
+                    <nav class="details-nav" role="navigation" aria-label="Details navigation">
+                        <button class="detail-button" data-el="details-button-1" tabindex="0">System</button>
+                        <button class="detail-button" data-el="details-button-2" tabindex="0">Industry Solutions</button>
+                        <button class="detail-button" data-el="details-button-3" tabindex="0">Components</button>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="content-area">
+                <div class="content-container">
+                    <p class="content-text">
+                        descriptive text... descriptive text descriptive text... descriptive
+                        text... descriptive text descriptive text... descriptive text...
+                        descriptive text descriptive text... descriptive text... descriptive
+                        text descriptive text
+                    </p>
+                    <div class="spec-box">
+                        <template data-el="show">
+              <span class="spec-content">
+                <template data-el="div-1"></template>
+              </span>
+                        </template>
+                        <template data-el="show-2">
+                            <span>Select a category to view details</span>
+                        </template>
+                    </div>
+                    <div class="additional-text">More and more text</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="combo-section">
+        <h2>Combo solutions</h2>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/a502310b5a57d1207e62828589d54dae95957b70727d698066a9db7ca9ffac8b?placeholderIfAbsent=true&apiKey=c18905d0a5434ff2b6793473074ac15b" alt="Product combination solutions showcase" class="combo-image" />
+    </section>
+
+    <h2 class="questions-title">Questions?</h2>
+    <button class="inquire-button" tabindex="0">Inquire.</button>
+</div>
+
+<script>
+    (() => {
+        const state = {};
+
+        let context = null;
+        let nodesToDestroy = [];
+        let pendingUpdate = false;
+
+        function destroyAnyNodes() {
+            nodesToDestroy.forEach((el) => el.remove());
+            nodesToDestroy = [];
+        }
+
+        function update() {
+            if (pendingUpdate === true) {
+                return;
+            }
+            pendingUpdate = true;
+
+            document
+                .querySelectorAll("[data-el='details-button-1']")
+                .forEach((el) => {
+                    el.removeEventListener("click", onDetailsButton1Click);
+                    el.addEventListener("click", onDetailsButton1Click);
+
+                    Object.assign(el.style, {
+                        "@media (max-width: 1200px)": {
+                            backgroundColor:
+                                state.selectedDetail === "system"
+                                    ? "#71E6A8"
+                                    : "transparent",
+                        },
+                    });
+                });
+
+            document
+                .querySelectorAll("[data-el='details-button-2']")
+                .forEach((el) => {
+                    el.removeEventListener("click", onDetailsButton2Click);
+                    el.addEventListener("click", onDetailsButton2Click);
+
+                    Object.assign(el.style, {
+                        "@media (max-width: 1200px)": {
+                            backgroundColor:
+                                state.selectedDetail === "industry"
+                                    ? "#71E6A8"
+                                    : "transparent",
+                        },
+                    });
+                });
+
+            document
+                .querySelectorAll("[data-el='details-button-3']")
+                .forEach((el) => {
+                    el.removeEventListener("click", onDetailsButton3Click);
+                    el.addEventListener("click", onDetailsButton3Click);
+
+                    Object.assign(el.style, {
+                        "@media (max-width: 1200px)": {
+                            backgroundColor:
+                                state.selectedDetail === "components"
+                                    ? "#71E6A8"
+                                    : "transparent",
+                        },
+                    });
+                });
+
+            document.querySelectorAll("[data-el='show']").forEach((el) => {
+                const whenCondition = state.selectedDetail;
+                if (whenCondition) {
+                    showContent(el);
+                }
+            });
+
+            document.querySelectorAll("[data-el='div-1']").forEach((el) => {
+                renderTextNode(el, state.detailContent[state.selectedDetail]);
+            });
+
+            document.querySelectorAll("[data-el='show-2']").forEach((el) => {
+                const whenCondition = !state.selectedDetail;
+                if (whenCondition) {
+                    showContent(el);
+                }
+            });
+
+            destroyAnyNodes();
+
+            pendingUpdate = false;
+        }
+
+        function onDetailsButton1Click(event) {
+            state.selectDetail("system");
+        }
+
+        function onDetailsButton2Click(event) {
+            state.selectDetail("industry");
+        }
+
+        function onDetailsButton3Click(event) {
+            state.selectDetail("components");
+        }
+
+        update();
+
+        function showContent(el) {
+            const elementFragment = el.content.cloneNode(true);
+            const children = Array.from(elementFragment.childNodes);
+            children.forEach((child) => {
+                if (el?.scope) {
+                    child.scope = el.scope;
+                }
+                if (el?.context) {
+                    child.context = el.context;
+                }
+                nodesToDestroy.push(child);
+            });
+            el.after(elementFragment);
+        }
+
+        function renderTextNode(el, text) {
+            const textNode = document.createTextNode(text);
+            if (el?.scope) {
+                textNode.scope = el.scope;
+            }
+            if (el?.context) {
+                textNode.context = el.context;
+            }
+            el.after(textNode);
+            nodesToDestroy.push(el.nextSibling);
+        }
+    })();
+</script>
+</html>
