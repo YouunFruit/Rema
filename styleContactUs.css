@@ -1,0 +1,193 @@
+.contact-section {
+    background: linear-gradient(180deg, rgba(127,237,145,1) 1%, #000 20%);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    padding: 274px 80px;
+}
+.contact-wrapper {
+    display: flex;
+    margin-left: 35px;
+    width: 100%;
+    max-width: 1074px;
+    flex-direction: column;
+}
+
+a {
+    font-size: 40px;
+}
+.contact-content {
+    display: flex;
+    margin-left: 39px;
+    width: 890px;
+    max-width: 100%;
+    flex-direction: column;
+    font: 400 40px Rethink Sans, sans-serif;
+}
+.contact-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    color: #fff;
+    width: 500px;
+    justify-content: start;
+}
+.header-title {
+    border-radius: 35px;
+    display: flex;
+    width: 498px;
+    max-width: 100%;
+    flex-direction: column;
+    color: #000;
+    font: 600 96px Reddit Sans, sans-serif;
+}
+.contact-heading {
+    border-radius: 35px;
+    background-color: #7fed91;
+    width: 700px;
+    padding: 0 48px 39px;
+}
+.form-group {
+    border-radius: 5px;
+    display: flex;
+    margin-top: 38px;
+    width: 514px;
+    max-width: 100%;
+    flex-direction: column;
+}
+.form-input {
+    border-radius: 5px;
+    background-color: #d9d9d9;
+    display: flex;
+    margin-top: 30px;
+    height: 34px;
+    width: 100%;
+    border: none;
+    padding: 8px;
+}
+.form-textarea {
+    border-radius: 20px;
+    background-color: #d9d9d9;
+    display: flex;
+    margin-top: 17px;
+    width: 100%;
+    height: 248px;
+    border: none;
+    padding: 12px;
+}
+.submit-button {
+    border-radius: 50px;
+    background-color: #7fed91;
+    border: none;
+    padding: 28px 21px;
+    color: #000;
+    font: 400 40px Rethink Sans, sans-serif;
+    cursor: pointer;
+    margin-top: 38px;
+    width: 211px;
+}
+.representative-button {
+    border-radius: 50px;
+    background-color: #7fed91;
+    border: none;
+    width: 497px;
+    max-width: 100%;
+    color: #000;
+    margin: 262px 0 0 41px;
+    padding: 31px 53px;
+    font: 400 40px Rethink Sans, sans-serif;
+    cursor: pointer;
+}
+.contact-info {
+    border-radius: 40px;
+    display: flex;
+    margin-top: 34px;
+    min-height: 467px;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    padding: 62px 47px 101px;
+    border: 5px solid #adadad;
+}
+.info-section {
+    border-radius: 0;
+    width: 928px;
+    max-width: 100%;
+    padding-bottom: 39px;
+}
+.info-row {
+    gap: 20px;
+    display: flex;
+}
+.info-col {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    font: 40px Rethink Sans, sans-serif;
+}
+.info-title {
+    font-weight: 400;
+    align-self: end;
+}
+.info-subtitle {
+    font-weight: 700;
+    align-self: start;
+    margin-top: -12px;
+}
+.contact-details {
+    color: #fff;
+    font: 400 40px Rethink Sans, sans-serif;
+}
+.visually-hidden {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
+}
+@media (max-width: 991px) {
+    .contact-section {
+        padding: 100px 20px;
+    }
+    .contact-wrapper {
+        max-width: 100%;
+    }
+    .header-title {
+        font-size: 40px;
+    }
+    .contact-heading {
+        font-size: 20px;
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    .submit-button {
+        padding: 0 20px;
+    }
+    .representative-button {
+        margin-top: 40px;
+        padding: 0 20px;
+    }
+    .contact-info {
+        max-width: 100%;
+        padding: 0 20px 100px;
+    }
+    .info-row {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+    .info-col {
+        margin-top: 40px;
+        width: 100%;
+    }
+    .contact-details {
+        max-width: 100%;
+        margin-top: 40px;
+    }
+}
