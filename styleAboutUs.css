@@ -1,4 +1,12 @@
 
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 95%, rgba(127,237,145,1) 98%);
+}
 .team-section {
     background: linear-gradient(180deg, rgba(127,237,145,1) 0%, #000 20%);
     display: flex;
@@ -68,21 +76,38 @@
     width: 40%;
 }
 .avatar-red {
-    background: #E45858;
+    background-image: url(static/iker.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 50%;
     width: 306px;
     height: 282px;
     margin: 0 auto;
 }
 .avatar-yellow {
-    background: #FCEB3D;
+    background-image: url(static/balita.PNG);
+    background-position: center;
+    background-size: cover;
     border-radius: 50%;
     width: 310px;
     height: 282px;
     margin: 0 auto;
 }
 .avatar-green {
-    background: #7FED91;
+    background-image: url(static/lui.PNG);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 306px;
+    height: 282px;
+    margin: 0 auto;
+}
+
+.avatar-blue {
+    background-image: url(static/denis.PNG);
+    background-position: center;
+    background-size: cover;
     border-radius: 50%;
     width: 306px;
     height: 282px;
