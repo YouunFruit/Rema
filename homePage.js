@@ -82,13 +82,13 @@ let textToDisplay = [
     },
     {
         id: 'aboutRema',
-        position: {x: canvas.width*0.6, y: canvas.height*0.3},
+        position: {x: canvas.width*0.3, y: canvas.height*0.15},
         dimension: {w: 500, h: 50},
         text:"ReMa is a groundbreaking company dedicated to revolutionizing manufacturing and waste management.\Our flagship product is a state-of-the-art 3D printing machine capable of melting and reusing any material an infinite number of times.\With a mission to eliminate waste and empower creativity, ReMa bridges cutting-edge technology with environmental responsibility.\Designed for industries and individuals alike, our printer redefines sustainability by transforming discarded materials into valuable resources.\At ReMa, we believe in a future where nothing goes to waste, and innovation drives a cleaner, greener world."
     },
     {
         id: "aboutMachine",
-        position: { x: canvas.width*0.715, y: canvas.height*0.134},
+        position: { x: canvas.width*0.3, y: canvas.height*0.1},
         dimension: {w: 500, h: 100},
         text:"The ReMa 3D Printer is a revolutionary device that transforms manufacturing and recycling. This advanced machine can melt and reuse any material an unlimited number of times, turning waste into endless opportunities. With its versatile design and eco-friendly functionality, the printer caters to industries, creators, and innovators, enabling them to produce sustainable products without compromising quality. Compact, efficient, and easy to use, the ReMa 3D Printer represents the future of circular technology, making waste a thing of the past."
     },
@@ -106,13 +106,13 @@ let textToDisplay = [
     },
     {
         id: "machineDetail3",
-        position: { x: canvas.width*0.7, y: canvas.height*0.2},
+        position: { x: canvas.width*0.35, y: canvas.height*0.1},
         dimension: {w: 500, h: 100},
         text:"Then, all the materials stored are re-assembled into the printing chamber. Our great sorting technology allows the machine to switch between materials for seamless printing of a huge array of possible devices or structures"
     },
     {
         id: "machineDetail4",
-        position: { x: canvas.width*0.7, y: canvas.height*0.2},
+        position: { x: canvas.width*0.3, y: canvas.height*0.1},
         dimension: {w: 500, h: 100},
         text:"All the processes required to manage our machines can be reviewed and controlled from the built-in terminal. This display can show all sorts of information, from remaining time left of the print to the amount of material of each type left in the machine's storage"
     },
@@ -142,7 +142,7 @@ let arrPositionModel = [
     {
         id: "aboutMachine",
         opacity: 1.0,
-        position: { x: 0, y: -1, z: 5 },
+        position: { x: -2, y: -2, z: 5 },
         rotation: { x: 0.5, y: -0.5, z: 0 },
         logo:{x:0,y:0,width:50,opacity:0}
     },
@@ -170,7 +170,7 @@ let arrPositionModel = [
     {
         id: "machineDetail4",
         opacity: 1.0,
-        position: { x: -3, y: -0.5, z: 40},
+        position: { x: -3.4, y: -0.5, z: 40},
         rotation: { x: 0.3, y: -1, z: 0 },
         logo:{x:-70,y:50,width:30,opacity:0}
     },
