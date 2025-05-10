@@ -76,7 +76,7 @@
 }
 
 .movableDiv{
-    position: absolute;
+    
     width: 500px; 
     height:fit-content; 
     background-color: blue;
@@ -99,8 +99,11 @@ body {
 }
 
 header {
+    width: 100%;
+    position: fixed;
     background: #7fed91;
     padding: 15px;
+    z-index: 200;
 }
 
 .navbar {
